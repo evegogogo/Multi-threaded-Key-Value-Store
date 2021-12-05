@@ -1,0 +1,39 @@
+Instruction:
+IntelliJ:
+1. Server args: 4444|5555|6666|7777|8888
+2. Client args: localhost 4444|localhost:5555|localhost:6666|localhost:7777|localhost:8888
+
+Docker:
+1. Quick run the server: ./deploy.sh
+2. Quick run the client: ./run_client.sh myclient-container 4444
+3. Start another client and do the operations together: ./run_client.sh myclient-container2 5555
+4. The same setting if you want to add more clients.
+3. Tests:
+    Client1
+    1) method: PUT, key: Tom, value: 100
+    2) method: PUT, key: Amy, value: 90
+    3) method: PUT, key: Dan
+    4) method: PUT, key: Walter, value: C
+    5) method: PUT, key: Walter, value: C
+    6) method: GET, key: Gus
+    7）method: GET, key: Dan
+    8）method: GET,
+    9）method: GET, key:
+    10）method: GET, key: Walter, value: C
+    11）method: GET, key: Dan
+    12）method: DELETE, key: Tom
+    13）method: DELETE, key: Tom
+    14）method: DELETE,
+    15）method: DELETE, key:
+    16）method: DELETE, key: Amy, value: 90
+    17) method: GET, key: Amy
+    Client2
+    1) method: GET, key: Tom
+    2) method: GET, key: Amy
+    3) method: GET, key: Dan
+    4) method: PUT, key: Dan, value: 1111
+    5) method: DELETE, key: Amy
+    One Server Crashed and try GET|PUT|DELETE
+    1) method: GET, key: Jesse
+    2) method: PUT, key: Eve, value: 2222
+    2) method: DELETE, key: Eve
